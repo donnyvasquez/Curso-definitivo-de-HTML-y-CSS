@@ -1,0 +1,27 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:16px;
+  background-color:rgb(238, 238, 238);
+}
+nav ul{
+  display:flex;
+}
+nav ul li{
+  padding: 0.5rem 1rem;
+  list-style: none;
+}
+main ul{
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.2);
+}
+main li{
+  border-bottom: 1px solid #eee;
+  padding:1rem;
+}
+main li:last-child{
+  border-bottom:none;
+}
+main li ol{
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
