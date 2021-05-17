@@ -1,0 +1,23 @@
+ /* Contenedor */
+.container{
+  margin: 0 15%;
+}
+
+/* Contenedor en el main */
+main .container{
+  flex-direction: row;
+  gap: 2rem;
+}
+/* .main-content para el contenido principal en desktop */
+main .container .main-content{
+  width: 70%;
+}
+/* Barra la teral en desktop */
+main .container aside {
+  width: 30%;
+}
+
+/* Site Features */
+  .site-features .container > article{
+  width: 33.3%;
+}

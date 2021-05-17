@@ -1,0 +1,7 @@
+/* Site Features */
+.site-features .container > article{
+  width: 25%;
+}
+.site-features .container > article:last-child{
+  width:40%;
+}
