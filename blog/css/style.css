@@ -140,6 +140,14 @@ section.banner img{
   background-color: var(--bg-soft-grey);
   padding: 1rem;
 }
+.site-features .container > article:last-child{
+  background-color: var(--bg-secondary);
+  color: var(--font-over-primary);
+}
+.site-features .container > article:nth-child(2){
+  background-color: var(--bg-primary);
+  color: var(--font-over-primary);
+}
 
 /* main */
 main{
@@ -160,7 +168,6 @@ main .container aside {
   padding-bottom: 4rem;
 }
 main .container > *{
-  flex-grow: 1;
   flex-basis: content;
 }
 main .main-content p,

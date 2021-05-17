@@ -1,4 +1,5 @@
  /* Contenedor */
   .container{
     margin: 0 8%;
+    flex-wrap: nowrap;
   }
