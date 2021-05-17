@@ -13,9 +13,13 @@
   --bg-light: #efefef;
   --bg-primary: #a85289;
   --bg-secondary: orange;
+  --bg-soft-grey: #e0e0e0;
 
   /* Sombras */
   --shadow-sm-dark: 0 0 0.75rem -0.35rem rgba(0, 0, 0, 0.25);
+  --shadow-md-dark: 0 0 1.25rem -0.35rem rgba(0, 0, 0, 0.25);
+  --shadow-lg-dark: 0 0 1.75rem -0.5rem rgba(0, 0, 0, 0.25);
+  --shadow-xl-dark: 0 0 2.25rem -0.75rem rgba(0, 0, 0, 0.25);
 }
 
 *{
@@ -44,13 +48,40 @@ a:focus{
   color: var(--link-secondary-color);
 }
 
+/* Encabezados */
+h1, h2, h3, h4, h5, h6{
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+h1:first-child,
+ h2:first-child,
+ h3:first-child,
+ h4:first-child,
+ h5:first-child,
+ h6:first-child{
+   margin-top: 0;
+ }
+
 .container{
   margin: 0 1rem;
   transition:all 0.5s ease-in-out;
+  gap: 2rem;
+  flex-wrap: nowrap;
 }
-@media (min-width:756px) {
+@media screen and (min-width:756px) {
+  .container{
+    margin: 0 8%;
+  }
+}
+@media screen and (min-width:992px) {
   .container{
     margin: 0 15%;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width:1200px) {
+  .container{
+    margin: 0 15%;
+    flex-wrap: nowrap;
   }
 }
 
@@ -104,7 +135,7 @@ header .container{
 
 /* Banner */
 section.banner{
-  box-shadow: var(--shadow-sm-dark);
+  box-shadow: var(--shadow-md-dark);
 }
 section.banner img{
   object-fit: cover;
@@ -113,6 +144,23 @@ section.banner img{
   max-height: 30vh;
   height:25vw;
   display: block;
+}
+
+/* Site Features */
+.site-features{
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width:992px) {
+  .site-features .container{
+    flex-column-template: 1fr 1fr 2fr;
+  }
+}
+
+.site-features .container > article{
+  border-radius: 0.5rem;
+  background-color: var(--bg-soft-grey);
+  padding: 1rem;
 }
 
 /* main */
@@ -153,18 +201,19 @@ main .container > *{
   flex-grow: 1;
   flex-basis: content;
 }
-main p{
+main .main-content p,
+main aside p{
   margin: 2rem 0;
   position: relative;
   /* Ejerccios de position */
 }
-main p.highlight{
+main .main-content p.highlight{
   padding: 1rem 1.25rem;
   border-radius: 0.25rem 1rem 1rem 0.25rem;
   background-color:var(--bg-white);
   padding-left: 1.25rem;
 }
-main p.highlight:before{
+main .main-content p.highlight:before{
   content: " ";
   left: 0.25rem;
   top: 5%;
@@ -175,25 +224,12 @@ main p.highlight:before{
   /* Ejerccios de position */
   background-color: rgb(203, 213, 233);
 }
-main p:first-child{
+main .main-content p:first-child{
   margin-top: 0;
 }
-main p:last-child{
+main .main-content p:last-child{
   margin-bottom: 0;
 }
-
-/* Encabezados */
-h1, h2, h3, h4, h5, h6{
-  font-family: Georgia, Times, 'Times New Roman', serif;
-}
-h1:first-child,
- h2:first-child,
- h3:first-child,
- h4:first-child,
- h5:first-child,
- h6:first-child{
-   margin-top: 0;
- }
 
 main h1{
   margin: 2rem 0;
