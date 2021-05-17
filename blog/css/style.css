@@ -90,10 +90,11 @@ main .container{
   gap: 2rem;
 }
 main .container .main-content{
-  /* width: 70%; */
+  width: 70%;
+  order:1;
 }
 main .container aside {
-  min-width: 30%;
+  width: 30%;
   order: 0;
 }
 main p{
